@@ -2,61 +2,55 @@
 title: "靡不有初"
 categories:
   - 无远弗届 Far & Wide
-tags:
-  - content
-  - css
-  - edge case
-  - lists
-  - markup
 ---
 
-Nested and mixed lists are an interesting beast. It's a corner case to make sure that
+立志用功，如种树然。方其根芽，犹未有干。及其有干，尚未有枝。枝而后叶。叶而后花实。初种根时，只管栽培灌溉。勿作枝想。勿作叶想。勿作花想。勿作实想。悬想何益？但不忘栽培之功，怕，没有枝叶花寅。
 
-立志用功，如种树然。方其根芽，犹未有干。及其有干，尚未有枝。枝而后叶。叶而后花实。初种根时，只管栽培灌溉。勿作枝想。勿作叶想。勿作花想。勿作实想。悬想何益？但不忘栽培之功，怕。没有枝叶花寅。
+王守仁 《传习录》
 
-* Lists within lists do not break the ordered list numbering order
-* Your list styles go deep enough.
+[>_<]: * Lists within lists do not break the ordered list numbering order
+[>_<]: * Your list styles go deep enough.
 
-### Ordered -- Unordered -- Ordered
+[>_<]: ### Ordered -- Unordered -- Ordered
 
-1. ordered item
-2. ordered item
-  * **unordered**
-  * **unordered**
-    1. ordered item
-    2. ordered item
-3. ordered item
-4. ordered item
+[>_<]: 1. ordered item
+[>_<]: 2. ordered item
+[>_<]:   * **unordered**
+[>_<]:   * **unordered**
+[>_<]:     1. ordered item
+[>_<]:     2. ordered item
+[>_<]: 3. ordered item
+[>_<]: 4. ordered item
 
-### Ordered -- Unordered -- Unordered
+[>_<]: ### Ordered -- Unordered -- Unordered
 
-1. ordered item
-2. ordered item
-  * **unordered**
-  * **unordered**
-    * unordered item
-    * unordered item
-3. ordered item
-4. ordered item
+[>_<]: 1. ordered item
+[>_<]: 2. ordered item
+[>_<]:   * **unordered**
+[>_<]:   * **unordered**
+[>_<]:     * unordered item
+[>_<]:     * unordered item
+[>_<]: 3. ordered item
+[>_<]: 4. ordered item
 
-### Unordered -- Ordered -- Unordered
+[>_<]: ### Unordered -- Ordered -- Unordered
 
-* unordered item
-* unordered item
-  1. ordered
-  2. ordered
-    * unordered item
-    * unordered item
-* unordered item
-* unordered item
+[>_<]: * unordered item
+[>_<]: * unordered item
+[>_<]:   1. ordered
+[>_<]:   2. ordered
+[>_<]:     * unordered item
+[>_<]:     * unordered item
+[>_<]: * unordered item
+[>_<]: * unordered item
 
-### Unordered -- Unordered -- Ordered
+[>_<]: ### Unordered -- Unordered -- Ordered
 
-* unordered item
-* unordered item
-  * unordered
-  * unordered
-    1. **ordered item**
-    2. **ordered item**
-* unordered item
-* unordered item
+[>_<]: * unordered item
+[>_<]: * unordered item
+[>_<]:   * unordered
+[>_<]:   * unordered
+[>_<]:     1. **ordered item**
+[>_<]:     2. **ordered item**
+[>_<]: * unordered item
+[>_<]: * unordered item
