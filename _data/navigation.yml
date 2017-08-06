@@ -1,7 +1,18 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Categories"
+    url: /
+    children:
+      - title: "得一 One"
+        url: /
+      - title: "无远弗届 Far & Wide"
+        url: /
+      - title: "功不唐捐 Deserve"
+        url: /
+      - title: "关于我 About Me"
+        url: /
+  # - title: "Quick-Start Guide"
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
