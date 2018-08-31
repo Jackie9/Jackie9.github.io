@@ -8,5 +8,5 @@ categories:
 
 今天突然发现惊吓式胸前反手抽球很有效果啊！就是球突然迎面袭来，被吓的反手一个抽球，就嘭地漂亮地抽过去了～好玩～
 
-![image-center](http://jackie9.github.io/assets/images/WechatIMG1.jpeg){: .align-center height="400px" width="400px"}
+![image-center](/assets/images/WechatIMG1.jpeg){: .align-center height="400px" width="400px"}
 
