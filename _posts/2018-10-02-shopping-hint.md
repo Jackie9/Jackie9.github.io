@@ -12,7 +12,7 @@ categories:
 
 ***
 
-[JK Zhang友情提供的某宝某猫神秘领券地点]（http://www.lq5u.com）
+[JK Zhang友情提供的某宝某猫神秘领券地点](http://www.lq5u.com)
 
 ***
 
