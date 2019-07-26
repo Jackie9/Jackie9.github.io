@@ -2,7 +2,7 @@
 title: "Configuration"
 permalink: /docs/configuration/
 excerpt: "Settings for configuring and customizing the theme."
-last_modified_at: 2018-11-25T19:42:42-05:00
+last_modified_at: 2019-07-24T10:15:47-04:00
 toc: true
 ---
 
@@ -134,6 +134,12 @@ _Example:_ `title_separator: "|"` would produce page titles like `Sample Page | 
 **Note:** Long site titles have been known to break the masthead layout. Avoid adding a long "tagline" to the title prevent this from happening eg. `My Awesome Site is the Best Because I Say So".
 {: .notice--warning}
 
+### Site subtitle
+
+A short tagline that appears below the title in site masthead.
+
+_Example:_ `subtitle: "Version 2.0"`
+
 ### Site name
 
 Used to assign a site author. Don't worry, you can override the site author with different ones on specific posts, pages, or collection documents.
@@ -223,6 +229,27 @@ header:
   <figcaption>Example of teaser images found in the related posts module.</figcaption>
 </figure>
 
+### Site masthead logo
+
+To insert a logo before the site title, place a graphic in the `/assets/images/` directory and add the filename to `_config.yml`:
+
+```yaml
+logo: "/assets/images/88x88.png"
+```
+
+<figure>
+  <img src="{{ '/assets/images/mm-masthead-logo.png' | relative_url }}" alt="masthead with logo and custom title">
+  <figcaption>Example of masthead with logo and custom title.</figcaption>
+</figure>
+
+### Site masthead title
+
+By default your site title is used in the masthead. You can override this text by adding the following to your `_config.yml`:
+
+```yaml
+masthead_title: "My Custom Title"
+```
+
 ### Breadcrumb navigation (beta)
 
 Enable breadcrumb links to help visitors better navigate deep sites. Because of the fragile method of implementing them they don't always produce accurate links reliably. For best results:
@@ -260,14 +287,13 @@ To disable reading time for a post, add `read_time: false` its YAML Front Matter
 
 ### Comments
 
-[**Disqus**](https://disqus.com/), [**Discourse**](https://www.discourse.org/), [**Facebook**](https://developers.facebook.com/docs/plugins/comments), **Google+**, [**utterances**](https://utteranc.es/), and static-based commenting via [**Staticman**](https://staticman.net/) are built into the theme. First set the comment provider you'd like to use:
+[**Disqus**](https://disqus.com/), [**Discourse**](https://www.discourse.org/), [**Facebook**](https://developers.facebook.com/docs/plugins/comments), [**utterances**](https://utteranc.es/), and static-based commenting via [**Staticman**](https://staticman.net/) are built into the theme. First set the comment provider you'd like to use:
 
 | Name             | Comment Provider          |
 | ---------------- | ------------------------- |
 | **disqus**       | Disqus                    |
 | **discourse**    | Discourse                 |
 | **facebook**     | Facebook Comments         |
-| **google-plus**  | Google+ Comments          |
 | **staticman_v2** | Staticman v2              |
 | **staticman**    | Staticman v1 (deprecated) |
 | **utterances**   | utterances                |
@@ -371,7 +397,19 @@ Transform user comments into `_data` files that live inside of your GitHub repos
 
 ###### Staticman v3
 
-Due to the support for GitLab, the URL scheme has been changed.  Bewteen `v3` and `/entry`, one needs to input a Git service provider (either `github` or `gitlab`).  Apart from that, the setup for GitHub remains the same.
+Due to the [support for GitLab](https://github.com/eduardoboucas/staticman/pull/219), the URL scheme has been changed.  Between `v3/entry/` and `/{your Git username}`, one needs to input a Git service provider (either `github` or `gitlab`).  For example
+
+    https://{your Staticman v3 API}/v3/entry/github/{your Git username}/{your repository name}/...
+
+```yaml
+# _config.yml (defaults)
+repository  : # Git username/repo-name e.g. "mmistakes/minimal-mistakes"
+comments:
+  provider  : "staticman_v2"
+  staticman:
+    branch    : "master"
+    endpoint  : https://{your Staticman v3 API}/v3/entry/github/
+```
 
 ###### Staticman v2
 
@@ -645,7 +683,7 @@ twitter:
 
 And if I assign `@mmistakes` as an author account it will appear in the Twitter Card along with `@mmistakes-theme`, attributed as a creator of the page being shared.
 
-**Note**: You need to [apply for Twitter Cards](https://dev.twitter.com/docs/cards) and validate they're working on your site before they will begin showing up.
+**Note**: You need to validate cards are working and have Twitter [approve Player Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/player-card) before they will begin showing up.
 {: .notice--warning}
 
 ##### Facebook Open Graph
@@ -765,7 +803,7 @@ Author links are all optional, include the ones you want visible under the `auth
 author:
   name: "Your Name"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "I am an amazing person."
+  bio: "I am an **amazing** person." # Note: Markdown is allowed
   location: "Somewhere"
   links:
     - label: "Made Mistakes"
@@ -823,7 +861,7 @@ Again nothing out of the ordinary here as the theme adheres to the defaults used
 
 ## Front Matter Defaults
 
-To save yourself time setting [Front Matter Defaults](https://jekyllrb.com/docs/configuration/#front-matter-defaults) for posts, pages, and collections is the way to go. Sure you can assign layouts and toggle settings like **reading time**, **comments**, and **social sharing** in each file, but that's not ideal.
+To save yourself time setting [Front Matter Defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) for posts, pages, and collections is the way to go. Sure you can assign layouts and toggle settings like **reading time**, **comments**, and **social sharing** in each file, but that's not ideal.
 
 Using the `default` key in `_config.yml` you could set the layout and enable author profiles, reading time, comments, social sharing, and related posts for all posts --- in one shot.
 
